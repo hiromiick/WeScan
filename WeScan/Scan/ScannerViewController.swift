@@ -36,7 +36,6 @@ public final class ScannerViewController: UIViewController {
     
     private lazy var cancelButton: UIButton = {
         let button = UIButton()
-//        button.setTitle(NSLocalizedString("wescan.scanning.cancel", tableName: nil, bundle: Bundle(for: ScannerViewController.self), value: "キャンセル", comment: "The cancel button"), for: .normal)
         button.setTitle("キャンセル", for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.addTarget(self, action: #selector(cancelImageScannerController), for: .touchUpInside)
@@ -44,7 +43,6 @@ public final class ScannerViewController: UIViewController {
     }()
     
     private lazy var autoScanButton: UIBarButtonItem = {
-//        let title = NSLocalizedString("wescan.scanning.auto", tableName: nil, bundle: Bundle(for: ScannerViewController.self), value: "自動", comment: "The auto button state")
         let title = "自動"
         let button = UIBarButtonItem(title: title, style: .plain, target: self, action: #selector(toggleAutoScan))
         button.tintColor = .white
@@ -74,6 +72,7 @@ public final class ScannerViewController: UIViewController {
         
         title = nil
         view.backgroundColor = UIColor.black
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         
         setupViews()
         setupNavigationBar()
@@ -237,11 +236,9 @@ public final class ScannerViewController: UIViewController {
     @objc private func toggleAutoScan() {
         if CaptureSession.current.isAutoScanEnabled {
             CaptureSession.current.isAutoScanEnabled = false
-//            autoScanButton.title = NSLocalizedString("wescan.scanning.manual", tableName: nil, bundle: Bundle(for: ScannerViewController.self), value: "手動", comment: "The manual button state")
             autoScanButton.title = "手動"
         } else {
             CaptureSession.current.isAutoScanEnabled = true
-//            autoScanButton.title = NSLocalizedString("wescan.scanning.auto", tableName: nil, bundle: Bundle(for: ScannerViewController.self), value: "自動", comment: "The auto button state")
             autoScanButton.title = "自動"
         }
     }

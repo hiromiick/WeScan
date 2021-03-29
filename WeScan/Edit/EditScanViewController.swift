@@ -31,7 +31,6 @@ final class EditScanViewController: UIViewController {
     }()
     
     private lazy var nextButton: UIBarButtonItem = {
-//        let title = NSLocalizedString("wescan.edit.button.next", tableName: nil, bundle: Bundle(for: EditScanViewController.self), value: "次へ", comment: "A generic next button")
         let title = "次へ"
         let button = UIBarButtonItem(title: title, style: .plain, target: self, action: #selector(pushReviewController))
         button.tintColor = navigationController?.navigationBar.tintColor
@@ -39,7 +38,6 @@ final class EditScanViewController: UIViewController {
     }()
     
     private lazy var cancelButton: UIBarButtonItem = {
-//        let title = NSLocalizedString("wescan.scanning.cancel", tableName: nil, bundle: Bundle(for: EditScanViewController.self), value: "キャンセル", comment: "A generic cancel button")
         let title = "キャンセル"
         let button = UIBarButtonItem(title: title, style: .plain, target: self, action: #selector(cancelButtonTapped))
         button.tintColor = navigationController?.navigationBar.tintColor
@@ -74,7 +72,6 @@ final class EditScanViewController: UIViewController {
         
         setupViews()
         setupConstraints()
-//        title = NSLocalizedString("wescan.edit.title", tableName: nil, bundle: Bundle(for: EditScanViewController.self), value: "スキャン画像を編集", comment: "The title of the EditScanViewController")
         title = "スキャン画像を編集"
         navigationItem.rightBarButtonItem = nextButton
         if let firstVC = self.navigationController?.viewControllers.first, firstVC == self {
