@@ -69,7 +69,8 @@ final class ReviewViewController: UIViewController {
         setupToolbar()
         setupConstraints()
         
-        title = NSLocalizedString("wescan.review.title", tableName: nil, bundle: Bundle(for: ReviewViewController.self), value: "レビュー", comment: "The review title of the ReviewController")
+//        title = NSLocalizedString("wescan.review.title", tableName: nil, bundle: Bundle(for: ReviewViewController.self), value: "レビュー", comment: "The review title of the ReviewController")
+        title = "レビュー"
         navigationItem.rightBarButtonItem = doneButton
     }
     
