@@ -62,13 +62,13 @@ final class ReviewViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         enhancedImageIsAvailable = results.enhancedScan != nil
         
         setupViews()
         setupToolbar()
         setupConstraints()
         
-//        title = NSLocalizedString("wescan.review.title", tableName: nil, bundle: Bundle(for: ReviewViewController.self), value: "レビュー", comment: "The review title of the ReviewController")
         title = "レビュー"
         navigationItem.rightBarButtonItem = doneButton
     }

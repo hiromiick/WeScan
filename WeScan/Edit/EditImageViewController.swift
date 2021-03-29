@@ -65,7 +65,7 @@ public final class EditImageViewController: UIViewController {
     
     override public func viewDidLoad() {
         super.viewDidLoad()
-        
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         setupViews()
         setupConstraints()
         zoomGestureController = ZoomGestureController(image: image, quadView: quadView)

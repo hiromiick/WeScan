@@ -69,7 +69,7 @@ final class EditScanViewController: UIViewController {
     
     override public func viewDidLoad() {
         super.viewDidLoad()
-        
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         setupViews()
         setupConstraints()
         title = "スキャン画像を編集"
