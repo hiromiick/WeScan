@@ -92,6 +92,11 @@ public final class ImageScannerController: UINavigationController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    public override func viewDidLoad() {
+        super.viewDidLoad()
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+    }
+    
     private func detect(image: UIImage, completion: @escaping (Quadrilateral?) -> Void) {
         // Whether or not we detect a quad, present the edit view controller after attempting to detect a quad.
         // *** Vision *requires* a completion block to detect rectangles, but it's instant.
